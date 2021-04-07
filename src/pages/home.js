@@ -117,12 +117,12 @@ class Home extends React.Component{
       <div className="col-12 col-md-4 p-5 mt-3">
         <a href="#"><img src="./assets/img/goku.png" className="rounded-circle img-fluid border" /></a>
         <h5 className="text-center mt-3 mb-3">T-shirts</h5>
-        <p className="text-center"><a className="btn btn-success">Go Shop</a></p>
+        <p className="text-center"><Link to ="/Products" className="btn btn-success">Products</Link></p>
       </div>
       <div className="col-12 col-md-4 p-5 mt-3">
         <a href="#"><img src="./assets/img/cup.png" className="rounded-circle img-fluid border" /></a>
         <h2 className="h5 text-center mt-3 mb-3">Collectibles</h2>
-        <p className="text-center"><a className="btn btn-success">Go Shop</a></p>
+        <p className="text-center"><Link to ="/productlist" className="btn btn-success">ProductList</Link></p>
       </div>
       <div className="col-12 col-md-4 p-5 mt-3">
         <a href="#"><img src="./assets/img/ps5.png" className="rounded-circle img-fluid border" /></a>

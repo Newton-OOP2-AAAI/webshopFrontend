@@ -58,7 +58,7 @@ class NavigationComponent extends React.Component {
             <Link to="/About" className="nav-link">About</Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="shop.html">Shop</a>
+            <Link to="/Shop" className="nav-link">Shop</Link>
             </li>
             <li className="nav-item">
               <a className="nav-link" href="contact.html">Contact</a>
