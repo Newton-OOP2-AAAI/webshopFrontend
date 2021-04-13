@@ -1,37 +1,29 @@
 import React from "react";
-//import About from "../pages/about";
-//import Home from "../pages/home";
 import styled from "styled-components";
-
-import {BrowserRouter, Route, Switch, Link} from "react-router-dom";
-import ProductComponent from "../components/ProductComponent";
-import { ProductConsumer } from "../pages/Context";
-
-
-import NavigationComponent from '../components/NavigationComponent';
+import {Link} from "react-router-dom";
+import ProductComponent from "../../components/ProductComponent";
+import { ProductConsumer } from "../Context";
 
 
-export default class Products extends React.Component{
-  
+
+
+export default class Product extends React.Component{
       render(){
-
  const { id, city, email, firstname, lastname, password, phone, street_name, street_number, username, zip_code, role_id } = this.props.product;
-
- return(
-          <div>
-
+   return(
 <ProductWrapper className="col-9 mx-auto col-md-6 col-lg-3 my-3">
         <div className="card">
-          <ProductConsumer>
-            {value => {
+           <ProductConsumer>
+            {value => { 
               return (
-                <div
-                  className="img-container p-5"
-                  onClick={() => value.handleDetail(id)}
+                <div className="img-container p-5"
+                  onClick={() => console.log("you clicked me on the image container")}
+                    /* value.handleDetail(id)} */
                 >
-                 <ul><li> <Link to="/deets">
+                  <Link to="/deets">
+                  <img src="/public/assets/img/goku.png" alt="product" className="card-img-top" />
                   {/*   <img src={img} alt="" className="card-img-top" /> */}
-                  </Link></li></ul>
+                  </Link>
                   <button
                     className="cart-btn"
                     /* disabled={inCart ? true : false} */
@@ -50,8 +42,8 @@ export default class Products extends React.Component{
                   </button>
                 </div>
               );
-            }}
-          </ProductConsumer>
+             }}
+          </ProductConsumer> 
           <div className="card-footer d-flex justify-content-between">
             <p className="align-self-center mb-0">{firstname}</p>
             <h5 className="text-blue font-italic mb-0">
@@ -62,7 +54,7 @@ export default class Products extends React.Component{
         </div>
       </ProductWrapper>
     
-      </div>
+     
     )
   }
 }

@@ -18,9 +18,6 @@ export default class ProductList extends Component {
   }
 }
 
-state = {
-  products: EmployeeService
-};
 componentDidMount() {
 
   EmployeeService.getEmployees().then((response) => {

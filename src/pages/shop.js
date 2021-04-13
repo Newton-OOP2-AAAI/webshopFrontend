@@ -176,21 +176,9 @@ class Shop extends React.Component {
                       <div className="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
                         <ul className="list-unstyled">
                           <li><Link to ="/Deets" className="btn btn-success text-white mt-2">
-                              <i className="far fa-heart"></i>  </Link>
+                              <i className="far fa-cart"></i>  </Link>
                           </li>
-                          
-                          <li>
-                            <a className="btn btn-success text-white mt-2" href="shop-single.html">                          <i className="far fa-eye" />
-                            </a>
-                          </li>
-                          <li>
-                            <a
-                              className="btn btn-success text-white mt-2"
-                              href="shop-single.html"
-                            >
-                              <i className="fas fa-cart-plus" />
-                            </a>
-                          </li>
+                         
                         </ul>
                       </div>
                     </div>
