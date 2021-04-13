@@ -17,7 +17,7 @@ class About extends React.Component{
       <div className="w-100 pt-1 mb-5 text-right">
         <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close" />
       </div>
-      <form action method="get" className="modal-content modal-body border-0 p-0">
+      <form method="get" className="modal-content modal-body border-0 p-0">
         <div className="input-group mb-2">
           <input type="text" className="form-control" id="inputModalSearch" name="q" placeholder="Search ..." />
           <button type="submit" className="input-group-text bg-success text-light">

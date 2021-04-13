@@ -85,7 +85,7 @@ componentDidMount() {
             <div className="card mb-3">
               <img
                 className="card-img img-fluid"
-                src="assets/img/product_single_10.jpg"
+                src="..assets/img/product_single_10.jpg"
                 alt="Card image cap"
                 id="product-detail"
               />
@@ -297,7 +297,7 @@ componentDidMount() {
                   <li>Dolore magna aliqua</li>
                   <li>Excepteur sint</li>
                 </ul>
-                <form action method="GET">
+                <form method="GET">
                   <input
                     type="hidden"
                     name="product-title"

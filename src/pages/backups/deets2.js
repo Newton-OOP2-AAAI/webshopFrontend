@@ -283,7 +283,7 @@ export default class Deets extends React.Component {
                       <li>Dolore magna aliqua</li>
                       <li>Excepteur sint</li>
                     </ul>
-                    <form action method="GET">
+                    <form method="GET">
                       <input
                         type="hidden"
                         name="product-title"

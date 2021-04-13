@@ -5,21 +5,9 @@ import ProductComponent from "../components/ProductComponent";
 import { ProductConsumer } from "../pages/Context";
 
 export default class Product extends Component {
+
+
   render() {
-    const {
-      id,
-      city,
-      email,
-      firstname,
-      lastname,
-      password,
-      phone,
-      street_name,
-      street_number,
-      username,
-      zip_code,
-      role_id,
-    } = this.props.product;
     return (
       <ProductWrapper className="col-9 mx-auto col-md-6 col-lg-3 my-3">
         <div className="card">
@@ -27,9 +15,9 @@ export default class Product extends Component {
             className="img-container p-5"
             onClick={() => console.log("you clicked me on the image container")}
           >
-            <Link to="/deets">
+            <Link to={'/product/' + this.props.product.id}>
               <img
-                src="/public/assets/img/goku.png"
+                src={'/assets/img/' + this.props.product.id + '_0.jpg'}
                 alt="product"
                 className="card-img-top"
               />
@@ -44,10 +32,9 @@ export default class Product extends Component {
             />
           </div>
           <div className="card-footer d-flex justify-content-between">
-            <p className="align-self-center mb-0">{firstname}</p>
+            <p className="align-self-center mb-0">{this.props.product.name}</p>
             <h5 className="text-blue font-italic mb-0">
-              <span className="mr-1">$</span>
-              {lastname}
+              <span className="mr-1">${this.props.product.price}.00</span>
             </h5>
           </div>
         </div>

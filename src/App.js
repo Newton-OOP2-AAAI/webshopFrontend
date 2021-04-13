@@ -6,6 +6,7 @@ import Product from "./pages/Product"
 import Shop from "./pages/shop"
 import Deets from "./pages/deets"
 import ProductList from "./components/ProductList"
+import ProductDetails from "./pages/ProductDetails"
 import "./App.css";
 import {BrowserRouter, Route, Switch} from "react-router-dom";
 import ShopSingle from "./pages/shop-single";
@@ -19,7 +20,7 @@ function App() {
  <Switch>
    <Route exact path ="/"> <Home/> </Route>
    <Route path ="/about"> <About/> </Route>
-   {/* <Route exact path ="/product/:id" component={Product}></Route> */}
+   <Route exact path ="/product/:id" component={ProductDetails}></Route>
 
    <Route path ="/shop"> <Shop/> </Route>
    <Route path ="/shopSingle"> <ShopSingle/> </Route>
