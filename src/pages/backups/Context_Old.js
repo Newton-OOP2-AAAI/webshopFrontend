@@ -1,27 +1,17 @@
 import React, { Component } from 'react';
-import EmployeeService from '../services/EmployeeService';
-import SingleEmployeeService from '../services/SingleEmployeeService';
-
-
+import EmployeeService from '../../services/EmployeeService';
 const ProductContext = React.createContext();
-
 class ProductProvider extends Component {
-    constructor(props) {
-        super(props)
-      this.state = {
-        products: []
-      }
-    }
-  
     state= {
         products: [],
-        SingleEmployeeService: SingleEmployeeService
+        EmployeeService: EmployeeService
     };
     componentDidMount(){
         this.setProducts();
     }
-     setProducts = () => {
+    setProducts = () => {
         let products = [];
+      // EmployeeService = JSON.parse(EmployeeService);
         {this.state.products.map(item => {
         const singleItem = {...item};
         products = [...products,singleItem];
@@ -30,15 +20,10 @@ class ProductProvider extends Component {
     return {products:products}
     });
 
-    }; 
-
-
-
-
-
-     handleDetail = ()=>{
+    };
+    /* handleDetail = ()=>{
         console.log('hello from deets');
-    } 
+    } */
 
     getItem = id => {
         const product = this.state.products.find(item => item.id === id);
@@ -48,7 +33,7 @@ class ProductProvider extends Component {
     handleDetail = id => {
         const product = this.getItem(id);
         this.setState(() => {
-          return { SingleEmployeeService: product };
+          return { EmployeeService: product };
         });
       };
 

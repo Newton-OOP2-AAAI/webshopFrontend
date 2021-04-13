@@ -42,9 +42,8 @@ class NavigationComponent extends React.Component {
   {/* Header */}
   <nav className="navbar navbar-expand-lg navbar-light shadow">
     <div className="container d-flex justify-content-between align-items-center">
-      <a className="navbar-brand text-success logo h1 align-self-center" href="index.html">
-        AAAI
-      </a>
+    <Link to="/" className="navbar-brand text-success logo h1 align-self-center">AAAI</Link>
+      
       <button className="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#templatemo_main_nav" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span className="navbar-toggler-icon" />
       </button>
