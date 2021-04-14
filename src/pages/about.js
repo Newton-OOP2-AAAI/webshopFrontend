@@ -33,11 +33,9 @@ class About extends React.Component{
         <div className="col-md-8 text-white">
           <h1>About Us</h1>
           <p>
-            <EmployeeComponent/>
-            Lord Fartsquad
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            We started AAAI because we, like you, have an interest in niched, or geeky, stuff and know that these types of products are not always easily available at your local shops and stores. 
+            You can find products from all your favorite shows, games and franchises in our inventory. Wands from Harry Potter? Check. Pokémon cards? Check. Collectible figures from My Hero Academia? You know it, check. 
+            Providing high quality clothing and items at a great price is our passion and we hope you enjoy your stay!
           </p>
         </div>
         <div className="col-md-4">
@@ -53,8 +51,7 @@ class About extends React.Component{
       <div className="col-lg-6 m-auto">
         <h1 className="h1">Our Services</h1>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-          Lorem ipsum dolor sit amet.
+          Questions about shipping, delivery, our promotions or simply how to get in touch with us? Look no further!
         </p>
       </div>
     </div>
@@ -93,8 +90,7 @@ class About extends React.Component{
         <div className="col-lg-6 m-auto">
           <h1 className="h1">Our Brands</h1>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-            Lorem ipsum dolor sit amet.
+            Our collection features products from a variety of brands. Have a look!
           </p>
         </div>
         <div className="col-lg-9 m-auto tempaltemo-carousel">
@@ -115,16 +111,16 @@ class About extends React.Component{
                   <div className="carousel-item active">
                     <div className="row">
                       <div className="col-3 p-md-5">
-                        <a href="#"><img className="img-fluid brand-img" src="assets/img/brand_01.png" alt="Brand Logo" /></a>
+                        <a href="#"><img className="img-fluid brand-img" src="assets/img/marvel2.png" alt="Brand Logo" /></a>
                       </div>
                       <div className="col-3 p-md-5">
-                        <a href="#"><img className="img-fluid brand-img" src="assets/img/brand_02.png" alt="Brand Logo" /></a>
+                        <a href="#"><img className="img-fluid brand-img" src="assets/img/Star_Wars.png" alt="Brand Logo" /></a>
                       </div>
                       <div className="col-3 p-md-5">
-                        <a href="#"><img className="img-fluid brand-img" src="assets/img/brand_03.png" alt="Brand Logo" /></a>
+                        <a href="#"><img className="img-fluid brand-img" src="assets/img/Pokemon.png" alt="Brand Logo" /></a>
                       </div>
                       <div className="col-3 p-md-5">
-                        <a href="#"><img className="img-fluid brand-img" src="assets/img/brand_04.png" alt="Brand Logo" /></a>
+                        <a href="#"><img className="img-fluid brand-img" src="assets/img/Magic.png" alt="Brand Logo" /></a>
                       </div>
                     </div>
                   </div>
@@ -133,16 +129,16 @@ class About extends React.Component{
                   <div className="carousel-item">
                     <div className="row">
                       <div className="col-3 p-md-5">
-                        <a href="#"><img className="img-fluid brand-img" src="assets/img/brand_01.png" alt="Brand Logo" /></a>
+                      <a href="#"><img className="img-fluid brand-img" src="assets/img/marvel2.png" alt="Brand Logo" /></a>
                       </div>
                       <div className="col-3 p-md-5">
-                        <a href="#"><img className="img-fluid brand-img" src="assets/img/brand_02.png" alt="Brand Logo" /></a>
+                        <a href="#"><img className="img-fluid brand-img" src="assets/img/Star_Wars.png" alt="Brand Logo" /></a>
                       </div>
                       <div className="col-3 p-md-5">
-                        <a href="#"><img className="img-fluid brand-img" src="assets/img/brand_03.png" alt="Brand Logo" /></a>
+                        <a href="#"><img className="img-fluid brand-img" src="assets/img/Pokemon.png" alt="Brand Logo" /></a>
                       </div>
                       <div className="col-3 p-md-5">
-                        <a href="#"><img className="img-fluid brand-img" src="assets/img/brand_04.png" alt="Brand Logo" /></a>
+                        <a href="#"><img className="img-fluid brand-img" src="assets/img/Magic.png" alt="Brand Logo" /></a>
                       </div>
                     </div>
                   </div>
@@ -151,16 +147,16 @@ class About extends React.Component{
                   <div className="carousel-item">
                     <div className="row">
                       <div className="col-3 p-md-5">
-                        <a href="#"><img className="img-fluid brand-img" src="assets/img/brand_01.png" alt="Brand Logo" /></a>
+                      <a href="#"><img className="img-fluid brand-img" src="assets/img/marvel2.png" alt="Brand Logo" /></a>
                       </div>
                       <div className="col-3 p-md-5">
-                        <a href="#"><img className="img-fluid brand-img" src="assets/img/brand_02.png" alt="Brand Logo" /></a>
+                        <a href="#"><img className="img-fluid brand-img" src="assets/img/Star_Wars.png" alt="Brand Logo" /></a>
                       </div>
                       <div className="col-3 p-md-5">
-                        <a href="#"><img className="img-fluid brand-img" src="assets/img/brand_03.png" alt="Brand Logo" /></a>
+                        <a href="#"><img className="img-fluid brand-img" src="assets/img/Pokemon.png" alt="Brand Logo" /></a>
                       </div>
                       <div className="col-3 p-md-5">
-                        <a href="#"><img className="img-fluid brand-img" src="assets/img/brand_04.png" alt="Brand Logo" /></a>
+                        <a href="#"><img className="img-fluid brand-img" src="assets/img/Magic.png" alt="Brand Logo" /></a>
                       </div>
                     </div>
                   </div>

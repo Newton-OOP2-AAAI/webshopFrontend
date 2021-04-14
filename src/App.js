@@ -1,10 +1,8 @@
 //import React,{useState,useEffect} from "react";
 import Home from "./pages/home"
 import About from "./pages/about"
-import Products from "./pages/products"
 import Product from "./pages/Product"
 import Shop from "./pages/shop"
-import Deets from "./pages/deets"
 import ProductList from "./components/ProductList"
 import ProductDetails from "./pages/ProductDetails"
 import "./App.css";
@@ -24,8 +22,8 @@ function App() {
 
    <Route path ="/shop"> <Shop/> </Route>
    <Route path ="/shopSingle"> <ShopSingle/> </Route>
-   <Route path ="/deets"> <Deets/> </Route>
-   <Route path ="/productlist"> <ProductList/> </Route>
+   <Route exact path ="/productlist"> <ProductList/> </Route>
+   <Route exact path ="/productlist/:id"  component={ProductList}></Route>
 
 
 

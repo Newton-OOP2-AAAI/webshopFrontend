@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import NavigationComponent from "../components/NavigationComponent";
-import { ProductConsumer } from "./Context";
-import EmployeeService from "../services/EmployeeService";
+import NavigationComponent from "../NavigationComponent";
+import { ProductConsumer } from "../../pages/Context";
+import EmployeeService from "../../services/EmployeeService";
 
 export default class Deets extends Component {
   constructor(props) {
