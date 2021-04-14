@@ -1,15 +1,14 @@
 import React from "react";
 import About from "../pages/about";
 import Home from "../pages/home";
+import CartService from "../services/CartService";
 import { BrowserRouter, Route, Switch, Link } from "react-router-dom";
 
 class NavigationComponent extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      cart: {
-        items: [],
-      },
+      cart: CartService.getCurrentCart(),
       cartIsOpen: false,
     };
   }
@@ -23,7 +22,8 @@ class NavigationComponent extends React.Component {
   }
 
   removeItemFromCart(item) {
-    this.state.cart.items.splice(this.state.cart.items.indexOf(item), 1);
+    CartService.remove(item);
+    this.setState({ cart: CartService.getCurrentCart() });
     this.forceUpdate();
   }
 
@@ -34,7 +34,10 @@ class NavigationComponent extends React.Component {
           <a
             className="nav-icon position-relative text-decoration-none"
             href="#"
-            onClick={() => (this.state.cartIsOpen = !this.state.cartIsOpen)}
+            onClick={() => {
+              this.state.cartIsOpen = !this.state.cartIsOpen;
+              this.forceUpdate();
+            }}
           >
             <i className="fa fa-fw fa-cart-arrow-down text-dark mr-1" />
             <span className="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark">
@@ -72,7 +75,10 @@ class NavigationComponent extends React.Component {
         <a
           className="nav-icon position-relative text-decoration-none"
           href="#"
-          onClick={() => (this.state.cartIsOpen = !this.state.cartIsOpen)}
+          onClick={() => {
+            this.state.cartIsOpen = !this.state.cartIsOpen;
+            this.forceUpdate();
+          }}
         >
           <i className="fa fa-fw fa-cart-arrow-down text-dark mr-1" />
           <span className="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark">
@@ -181,14 +187,9 @@ class NavigationComponent extends React.Component {
                     </Link>
                   </li>
                   <li className="nav-item">
-                    <Link to="/Shop" className="nav-link">
+                    <Link to="/ProductList" className="nav-link">
                       Shop
                     </Link>
-                  </li>
-                  <li className="nav-item">
-                    <a className="nav-link" href="contact.html">
-                      Contact
-                    </a>
                   </li>
                 </ul>
               </div>

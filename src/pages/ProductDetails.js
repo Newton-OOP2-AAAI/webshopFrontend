@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import styled from "styled-components";
+import CartService from "../services/CartService";
 import NavigationComponent from "../components/NavigationComponent";
 
 import ProductService from "../services/ProductService";
@@ -10,10 +11,7 @@ export default class ProductDetails extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      product: {},
-      cart: {
-        items: []
-      },
+      product: {},      
       selectedImageIndex: 0,
       selectedAmount: 1
     };
@@ -33,7 +31,7 @@ export default class ProductDetails extends Component {
 
   addToCart() {    
       for(let i = 0; i < this.state.selectedAmount; ++i) {
-        this.state.cart.items.push(this.state.product);
+        CartService.add(this.state.product);        
       }
 
       this.forceUpdate();
@@ -44,6 +42,8 @@ export default class ProductDetails extends Component {
       return;
     }
 
+
+
     ProductService.getProduct(this.props.match.params.id).then((response) => {
       this.setState({ product: response.data });
     });
@@ -53,9 +53,14 @@ export default class ProductDetails extends Component {
   
 
   render() {
+    const categories = this.state.product && this.state.product.categories ? Object.values(this.state.product.categories) : []
+    ;
+    console.log(categories);
+;
     return (
+    
       <div>
-        <NavigationComponent cart={this.state.cart}/>
+        <NavigationComponent />
         <div
           className="modal fade bg-white"
           id="templatemo_search"
@@ -203,12 +208,12 @@ export default class ProductDetails extends Component {
                     </p>
                     <ul className="list-inline">
                       <li className="list-inline-item">
-                        <h6>Brand:</h6>
+                        <h6>Category:</h6>
                       </li>
                       <li className="list-inline-item">
                         <p className="text-muted">
                           <strong>
-                            {this.state.product.name}
+                          {categories.join(", ")}
                           </strong>
                         </p>
                       </li>
@@ -227,16 +232,7 @@ export default class ProductDetails extends Component {
                         </p>
                       </li>
                     </ul>
-                    <h6>Specification:</h6>
-                    <ul className="list-unstyled pb-3">
-                      <li>Lorem ipsum dolor sit</li>
-                      <li>Amet, consectetur</li>
-                      <li>Adipiscing elit,set</li>
-                      <li>Duis aute irure</li>
-                      <li>Ut enim ad minim</li>
-                      <li>Dolore magna aliqua</li>
-                      <li>Excepteur sint</li>
-                    </ul>
+                    
                     <form method="GET">
                       <input
                         type="hidden"
@@ -311,13 +307,11 @@ export default class ProductDetails extends Component {
                       </div>
                       <div className="row pb-3">
                         <div className="col d-grid">
-                          <Link to="/Shop">
+                          <Link to="/ProductList">
                             <button
                               type="submit"
                               className="btn btn-success btn-lg"
-                              name="submit"
-                              value="buy"
-                            >
+                             >
                               Go back
                             </button>
                           </Link>
